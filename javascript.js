@@ -9,6 +9,10 @@ dancesArray[4] = "<iframe src='https://giphy.com/embed/7FgZeNcxdL8URqQi2X'>";
 dancesArray[5] = "<iframe src='https://giphy.com/embed/bqGaIoo2sN6KparUwM'>";
 dancesArray[6] = "<iframe src='https://giphy.com/embed/1o1fMfYGvnibozOTjn'>";
 dancesArray[7] = "<iframe src='https://giphy.com/embed/pcJQpEUNwyn6LtxtPO'>";
+dancesArray[8] = "<iframe src='https://i.imgur.com/QNMX1rE.gif'>";
+dancesArray[9] = "<iframe src='https://i.imgur.com/K6xpy.gif'>";
+dancesArray[10] = "<iframe src='https://i.imgur.com/zLSuk.gif'>";
+dancesArray[11] = "<iframe src='https://i.imgur.com/J2Plx2D.gif'>";
 
 function PlayVideo() {
     var randomMeme = Math.floor(Math.random() * (dancesArray.length));
@@ -32,4 +36,3 @@ function PlayAudio() {
     document.getElementById('paudio').innerHTML = audioArray[randomAudio];
 
 }
-
