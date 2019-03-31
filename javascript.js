@@ -9,14 +9,12 @@ dancesArray[4] = "<iframe src='https://giphy.com/embed/7FgZeNcxdL8URqQi2X'>";
 dancesArray[5] = "<iframe src='https://giphy.com/embed/bqGaIoo2sN6KparUwM'>";
 dancesArray[6] = "<iframe src='https://giphy.com/embed/1o1fMfYGvnibozOTjn'>";
 dancesArray[7] = "<iframe src='https://giphy.com/embed/pcJQpEUNwyn6LtxtPO'>";
-dancesArray[8] = "<iframe src='https://i.imgur.com/QNMX1rE.gif'>";
-dancesArray[9] = "<iframe src='https://i.imgur.com/K6xpy.gif'>";
-dancesArray[10] = "<iframe src='https://i.imgur.com/zLSuk.gif'>";
-dancesArray[11] = "<iframe src='https://i.imgur.com/J2Plx2D.gif'>";
+dancesArray[8] = "<iframe src='https://giphy.com/embed/uWqj1y20g3H5BNysqi'>";
+dancesArray[9] = "<iframe src='https://giphy.com/embed/l36lCc5vupJZMFwfy0'>";
+dancesArray[10] = "<iframe src='https://giphy.com/embed/vx2zBWZSKtLUHwrWQD'>";
 
-function PlayVideo() {
-    var randomMeme = Math.floor(Math.random() * (dancesArray.length));
-    document.getElementById('pmeme').innerHTML = dancesArray[randomMeme];
+function playVideo() {
+    document.getElementById('pmeme').innerHTML = dancesArray[getRandomIndex(dancesArray)];
 }
 
 var audioArray = [];
@@ -31,8 +29,10 @@ audioArray[6] = "Chamber of Reflection by Mac Demarco<audio autoplay loop><ifram
 audioArray[7] = "Death with Dignity by Sufjan Stevens<audio autoplay loop><iframe src='https://drive.google.com/uc?export=view&id=184CnBLtJiRhjuRIgg9DwZv-7hl4Gtubt' type='audio/ogg'>;<iframe src='https://drive.google.com/uc?export=view&id=184CnBLtJiRhjuRIgg9DwZv-7hl4Gtubt' type='audio/mpeg'>;</audio>";
 
 
-function PlayAudio() {
-    var randomAudio = Math.floor(Math.random() * (audioArray.length));
-    document.getElementById('paudio').innerHTML = audioArray[randomAudio];
+function playAudio() {
+    document.getElementById('paudio').innerHTML = audioArray[getRandomIndex(audioArray)];
+}
 
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * (array.length));
 }
